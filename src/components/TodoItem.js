@@ -2,6 +2,9 @@ import React from "react";
 import "../styles/TodoItem.css";
 
 function TodoItem(props) {
+  // const onClickButton = () => {
+  //   props.setOpenModalDelete(true)
+  // }
 
   return (
     <li className="TodoItem">
@@ -16,6 +19,7 @@ function TodoItem(props) {
       <span 
         className="Icon Icon-delete"
         onClick={props.onDelete}>
+        {/* onClick={onClickButton}>  */}
         X
         </span>
     </li>

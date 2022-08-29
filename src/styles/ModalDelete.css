@@ -1,5 +1,5 @@
-.Modal{
-     background: rgba(30, 67, 140, 0.8);
+.ModalDelete{
+     background: rgba(204, 53, 88, 0.8);
      position: fixed;
      top: -10px;
      left: -10px;
@@ -8,5 +8,5 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     color: white;
+     color: black;
 }

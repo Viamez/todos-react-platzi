@@ -6,12 +6,15 @@ import { TodoSearch } from "../components/TodoSearch";
 import { TodoList } from "../components/TodoList";
 import { TodoItem } from "../components/TodoItem";
 import { CreateTodoButton } from "../components/CreateTodoButton";
+import { ChangeAlertWithStorageListener } from "../ChangeAlert";
 import { Modal } from "../Modal/index";
+// import { ModalDelete } from "../ModalDelete/index";
 import {EmptyTodos} from "../components/EmptyTodos";
 import {TodosError} from "../components/TodosError";
 import { SearchValueTodos } from "../components/SearchValueTodos";
 import {TodosLoading} from "../components/TodosLoading";
 import { TodoForm } from "../TodoForm";
+// import { TodoFormDelete } from "../TodoFormDelete";
 
 function App() {
   const {
@@ -21,7 +24,9 @@ function App() {
     toggleCompleteTodo,
     deleteTodo,
     openModal,
+    // openModalDelete,
     setOpenModal,
+    // setOpenModalDelete,
     addTodo,
     totalTodos,
     completedTodos,
@@ -31,10 +36,18 @@ function App() {
 
   return (
     <React.Fragment>
-      <TodoHeader>
-        <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} />
-        <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+
+      <TodoHeader loading={loading}>
+        <TodoCounter 
+          totalTodos={totalTodos} 
+          completedTodos={completedTodos}
+           />
+        <TodoSearch 
+          searchValue={searchValue} 
+          setSearchValue={setSearchValue} 
+          />
       </TodoHeader>
+
       <TodoList
         error={error}
         loading={loading}
@@ -59,8 +72,11 @@ function App() {
         //   />
         // )}
       >
+        
         {todo=>(
+          
           <TodoItem
+            // setOpenModalDelete={setOpenModalDelete}
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
@@ -70,6 +86,7 @@ function App() {
             onDelete={() => deleteTodo(todo.text)}
           />
         )} 
+        
         </TodoList>
       {!!openModal && (
         <Modal>
@@ -78,8 +95,17 @@ function App() {
           setOpenModal={setOpenModal} />
         </Modal>
       )}
+           
+       {/* {!!openModalDelete&&(
+         <ModalDelete>
+          <TodoFormDelete
+          addTodo={addTodo}
+          setOpenModalDelete={setOpenModalDelete} />
+       </ModalDelete>
+       )} */}
 
       <CreateTodoButton setOpenModal={setOpenModal} />
+      <ChangeAlertWithStorageListener/>
     </React.Fragment>
   );
 }
