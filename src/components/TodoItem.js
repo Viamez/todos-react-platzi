@@ -13,9 +13,9 @@ function TodoItem(props) {
         onClick={props.onComplete}>
         √
       </span>
-      <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
+      <textarea className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
         {props.text}
-      </p>
+      </textarea>
       <span 
         className="Icon Icon-delete"
         onClick={props.onDelete}>

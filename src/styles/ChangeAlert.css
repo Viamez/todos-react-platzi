@@ -4,16 +4,17 @@
   left: 0;
   right: 0;
   bottom: 0;
+  place-items: center;
   background: #21111550;
+  display: grid;
+  place-items: center;
   z-index: 2;
+  
 }
 
 .ChangeAlert-container {
   border-radius: 15px;
   position: fixed;
-  bottom: 200px;
-  left: 130px;
-  right: 130px;
   background-color: rgba(204, 53, 88, 0.8);
   color: #f2f4f5;
   z-index: 2;

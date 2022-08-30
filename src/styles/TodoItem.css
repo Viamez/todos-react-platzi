@@ -10,14 +10,22 @@
   }
   
   .TodoItem-p {
-    margin: 24px 0 24px 24px;
-    width: calc(100% - 120px);
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 400;
+    background-color: #F9FBFC;
+    border: 1px solid #202329;
+    border-radius: 2px;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+    color: #1E1E1F;
+    font-size: 15px;
+    text-align: center;
+    padding: 12px;
+    height: 46px;
+    width: calc(100% - 15px);
   }
   .TodoItem-p--complete {
     text-decoration: line-through;
+    padding: 12px;
+    height: 15px;
+    background-color: rgba(31, 229, 17, 0.15);
   }
   
   .Icon {
