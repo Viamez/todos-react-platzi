@@ -1,11 +1,9 @@
 import React from "react";
 import "../styles/TodoItem.css";
-
 function TodoItem(props) {
   // const onClickButton = () => {
   //   props.setOpenModalDelete(true)
   // }
-
   return (
     <li className="TodoItem">
       <span
@@ -13,9 +11,9 @@ function TodoItem(props) {
         onClick={props.onComplete}>
         √
       </span>
-      <textarea className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
+      <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
         {props.text}
-      </textarea>
+      </p>
       <span 
         className="Icon Icon-delete"
         onClick={props.onDelete}>
@@ -25,5 +23,4 @@ function TodoItem(props) {
     </li>
   );
 }
-
 export { TodoItem };

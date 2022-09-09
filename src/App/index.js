@@ -5,16 +5,14 @@ import { TodoCounter } from "../components/TodoCounter";
 import { TodoSearch } from "../components/TodoSearch";
 import { TodoList } from "../components/TodoList";
 import { TodoItem } from "../components/TodoItem";
-import { CreateTodoButton } from "../components/CreateTodoButton";
-import { ChangeAlert } from "../ChangeAlert";
-import { Modal } from "../Modal/index";
-// import { ModalDelete } from "../ModalDelete/index";
-import {EmptyTodos} from "../components/EmptyTodos";
 import {TodosError} from "../components/TodosError";
-import { SearchValueTodos } from "../components/SearchValueTodos";
 import {TodosLoading} from "../components/TodosLoading";
+import {EmptyTodos} from "../components/EmptyTodos";
 import { TodoForm } from "../TodoForm";
-// import { TodoFormDelete } from "../TodoFormDelete";
+import { CreateTodoButton } from "../components/CreateTodoButton";
+import { SearchValueTodos } from "../components/SearchValueTodos";
+import { Modal } from "../Modal/index";
+import { ChangeAlert } from "../ChangeAlert";
 
 function App() {
   const {
@@ -24,9 +22,7 @@ function App() {
     toggleCompleteTodo,
     deleteTodo,
     openModal,
-    // openModalDelete,
     setOpenModal,
-    // setOpenModalDelete,
     addTodo,
     totalTodos,
     completedTodos,
@@ -61,23 +57,11 @@ function App() {
         onEmptyTodos={()=><EmptyTodos/> }
         onEmptySearchResults={(searchText)=><SearchValueTodos
         searchText={searchText} />}
-        // render={todo=>(
-        //   <TodoItem
-        //     key={todo.text}
-        //     text={todo.text}
-        //     completed={todo.completed}
-        //     onComplete={() => {
-        //       toggleCompleteTodo(todo.text);
-        //     }}
-        //     onDelete={() => deleteTodo(todo.text)}
-        //   />
-        // )}
       >
         
         {todo=>(
           
           <TodoItem
-            // setOpenModalDelete={setOpenModalDelete}
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
@@ -96,14 +80,6 @@ function App() {
           setOpenModal={setOpenModal} />
         </Modal>
       )}
-           
-       {/* {!!openModalDelete&&(
-         <ModalDelete>
-          <TodoFormDelete
-          addTodo={addTodo}
-          setOpenModalDelete={setOpenModalDelete} />
-       </ModalDelete>
-       )} */}
 
       <CreateTodoButton setOpenModal={setOpenModal} />
       <ChangeAlert sincronize={sincronizeTodos} />
