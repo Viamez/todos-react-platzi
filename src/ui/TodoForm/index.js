@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/TodoForm.css"
+import "../../styles/TodoForm.css"
 
 function TodoForm({addTodo, setOpenModal}){
     const [newTodoValue, setNewTodoValue]= React.useState('');
