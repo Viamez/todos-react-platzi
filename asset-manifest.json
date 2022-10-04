@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/todos-react-platzi/static/css/main.81aeae46.css",
+    "main.js": "/todos-react-platzi/static/js/main.918eabf8.js",
+    "static/media/background.jpg": "/todos-react-platzi/static/media/background.268bcc8e7348c9a90eec.jpg",
+    "index.html": "/todos-react-platzi/index.html",
+    "static/media/delete.svg": "/todos-react-platzi/static/media/delete.331149da222541bc87c25bf8d775a070.svg",
+    "static/media/edit.svg": "/todos-react-platzi/static/media/edit.8cfd1d84718f081de4327bd813c4738c.svg",
+    "static/media/check.svg": "/todos-react-platzi/static/media/check.fa4fb594b16385306a04b9c87c0feb55.svg",
+    "main.81aeae46.css.map": "/todos-react-platzi/static/css/main.81aeae46.css.map",
+    "main.918eabf8.js.map": "/todos-react-platzi/static/js/main.918eabf8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81aeae46.css",
+    "static/js/main.918eabf8.js"
+  ]
+}
