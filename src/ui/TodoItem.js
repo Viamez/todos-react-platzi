@@ -1,4 +1,5 @@
 import React from "react";
+import { EditIcon } from "./TodoIcon/EditIcon";
 import "../styles/TodoItem.css";
 function TodoItem(props) {
   // const onClickButton = () => {
@@ -7,19 +8,22 @@ function TodoItem(props) {
   return (
     <li className="TodoItem">
       <span
-        className={`Icon Icon-Check ${props.completed && "Icon-check--active"} `}
-        onClick={props.onComplete}>
+        className={`Icon Icon-Check ${
+          props.completed && "Icon-check--active"
+        } `}
+        onClick={props.onComplete}
+      >
         √
       </span>
       <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
         {props.text}
       </p>
-      <span 
-        className="Icon Icon-delete"
-        onClick={props.onDelete}>
-        {/* onClick={onClickButton}>  */}
-        X
-        </span>
+      <EditIcon 
+        onEdit={props.onEdit}
+      />
+      <span className="Icon Icon-delete" onClick={props.onDelete}>
+        {/* onClick={onClickButton}>  */}X
+      </span>
     </li>
   );
 }
